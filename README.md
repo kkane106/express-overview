@@ -1,5 +1,5 @@
-<h2>ExpressJS Overview</h2>
-  <h4>Learning Objectives</h4>
+##ExpressJS Overview
+  ####Learning Objectives
     <ul>
       <li><a href="#dependencies">Express and Node dependencies</a></li>
       <li><a href="#package">Configure applications with package.json</a></li>
@@ -10,34 +10,35 @@
       <li><a href="#debug">Debugging http requests</a></li>
     </ul>
 <hr>
-  <h4>What is Express?</h4>
-    <blockquote>Fast, unopinionated, minimalist web framework for Node.js -expressjs.com</blockquote>
-  <h4><a name="dependencies">Installing Dependencies</a></h4>
-     <h5>Node.js</h5>
-       <p>The first and most integral dependency is Node, it grants the flexibility to:</p>
+  ####What is Express?
+    >Fast, unopinionated, minimalist web framework for Node.js  
+    >-expressjs.com
+  ####<a name="dependencies">Installing Dependencies</a>
+     #####Node.js
+       The first and most integral dependency is Node, it grants the flexibility to:
        <ul>
          <li>create web servers</li>
          <li>integrate modules (libraries)</li>
          <li>quickly create scalable applications</li>
        </ul>
-       <p><strong>Download</strong> the pre built Node installer here: https://nodejs.org/en/download/</p>
-       <p>Check that your install has completed successfully:</p>
+       **Download** the pre built Node installer here: https://nodejs.org/en/download/
+       Check that your install has completed successfully:
 
 ```
 node -v
 # v0.12.7
 ```
 
-       <p>Now that Node is installed we have access to Node Package Manager ('npm'). npm helps us manage the dependencies for our application, including module installation through command line.</p>
-    <h5>Configuring your first ExpressJS Application</h5>
-      <p>Create a new directory for the application, and navigate inside of it.</p>
+       Now that Node is installed we have access to Node Package Manager ('npm'). npm helps us manage the dependencies for our application, including module installation through command line.
+    #####Configuring your first ExpressJS Application
+      Create a new directory for the application, and navigate inside of it.
 
 ```
 mkdir expressGrandma
 cd expressGrandma
 ```
 
-      <p>Now we need to create a 'package.json' file for our application. There are several rules about what information is required within package.json, all of which are covered in the npm docs (https://docs.npmjs.com/files/package.json). Luckily, npm will help us set up our package.json file via command line:</p>
+      Now we need to create a 'package.json' file for our application. There are several rules about what information is required within package.json, all of which are covered in the npm docs (https://docs.npmjs.com/files/package.json). Luckily, npm will help us set up our package.json file via command line:
 
 ```
 npm init
