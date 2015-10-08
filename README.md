@@ -115,6 +115,35 @@ ls
 # node_modules    package.json
 ```
 
+Looking inside of node_modules you'll find express, and looking inside of express you find a node_modules directory (that's where all of those express dependencies went when we installed it)!
+
+```
+ls node_modules/
+# express
+
+ls node_modules/express/
+# History.md  Readme.md lib   package.json
+# LICENSE   index.js  node_modules
+
+ls node_modules/express/node_modules/
+# accepts     methods
+# array-flatten   on-finished
+# content-disposition parseurl
+# content-type    path-to-regexp
+# cookie      proxy-addr
+# cookie-signature  qs
+# debug     range-parser
+# depd      send
+# escape-html   serve-static
+# etag      type-is
+# finalhandler    utils-merge
+# fresh     vary
+# merge-descriptors
+```
+
+
+
+
 
 #### Resources  
   * [Node Docs](https://nodejs.org/en/docs/)
