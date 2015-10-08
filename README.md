@@ -1,14 +1,16 @@
 ## ExpressJS Overview
 #### Learning Objectives
-* [Express and Node dependencies](#installing-dependencies)
-* [Configure applications with package.json]()
-* [Synchronous routing]()
-* [JavaScript MVC]()
-* [Dynamic templating]()
-* [Asynchronous routing]()
-* [Debugging http requests]()
+* [Introduction](#)
+* [Installing Dependencies](#installing-dependencies)
+* [Configure applications with package.json](#)
+* [Synchronous routing](#)
+* [JavaScript MVC](#)
+* [Dynamic templating](#)
+* [Asynchronous routing](#)
+* [Debugging http requests](#)
+* [Resources](#resources)
 
-#### What is Express?
+#### Introduction
 >Fast, unopinionated, minimalist web framework for Node.js  
 >-expressjs.com
 
@@ -53,3 +55,68 @@ npm init
 # Press ^C at any time to quit.
 # name: (expressGrandma) 
 ```
+
+For the time being we will use all of the default settings npm presents us with, simply press 'return' until you are presented with:
+
+
+```
+# Is this ok? (yes)
+```
+
+Enter: yes
+
+Now if you list the files in the directory you should see a package.json file.
+
+```
+ls
+# package.json
+```
+
+Finally, let's install the express module using npm, and save the dependency to our package.json file. This can be accomplished using the '--save' option. In order to install a module we use the 'install' term with npm followed by the package name. We want to save the dependency, so we will append the '--save' option as well.
+
+```
+npm install express --save
+
+# npm WARN package.json tester@1.0.0 No README data
+# express@4.13.3 node_modules/express
+# ├── escape-html@1.0.2
+# ├── merge-descriptors@1.0.0
+# ├── array-flatten@1.1.1
+# ├── utils-merge@1.0.0
+# ├── methods@1.1.1
+# ├── fresh@0.3.0
+# ├── cookie-signature@1.0.6
+# ├── range-parser@1.0.2
+# ├── cookie@0.1.3
+# ├── vary@1.0.1
+# ├── path-to-regexp@0.1.7
+# ├── content-type@1.0.1
+# ├── etag@1.7.0
+# ├── parseurl@1.3.0
+# ├── content-disposition@0.5.0
+# ├── serve-static@1.10.0
+# ├── depd@1.0.1
+# ├── qs@4.0.0
+# ├── on-finished@2.3.0 (ee-first@1.1.1)
+# ├── finalhandler@0.4.0 (unpipe@1.0.0)
+# ├── debug@2.2.0 (ms@0.7.1)
+# ├── proxy-addr@1.0.8 (forwarded@0.1.0, ipaddr.js@1.0.1)
+# ├── send@0.13.0 (destroy@1.0.3, statuses@1.2.1, ms@0.7.1, # mime@1.3.4, http-errors@1.3.1)
+# ├── type-is@1.6.9 (media-typer@0.3.0, mime-types@2.1.7)
+# └── accepts@1.2.13 (negotiator@0.5.3, mime-types@2.1.7)
+```
+
+Don't worry about that `npm WARN package.json tester@1.0.0 No README data`, all that is telling you is that you haven't added README data to the package.json file, we may or may not do that later, but for now it won't get in our way. The rest of the text is the list of express dependencies that were added to the project.
+
+If you run the list program you will see that there is a new directory in your project.
+
+```
+ls
+# node_modules    package.json
+```
+
+
+#### Resources  
+  * [Node Docs](https://nodejs.org/en/docs/)
+  * [Express Docs](http://expressjs.com/4x/api.html)
+  * [npm Docs](https://www.npmjs.com/)
