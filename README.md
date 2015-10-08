@@ -63,7 +63,7 @@ For the time being we will use all of the default settings npm presents us with,
 # Is this ok? (yes)
 ```
 
-Enter: yes
+Enter: **yes**
 
 Now if you list the files in the directory you should see a package.json file.
 
