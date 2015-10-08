@@ -1,17 +1,18 @@
 ## ExpressJS Overview
 #### Learning Objectives
-* <a href="#dependencies">Express and Node dependencies</a>
-* <a href="#package">Configure applications with package.json</a>
-* <a href="#sync">Synchronous routing</a>
-* <a href="#mvc">JavaScript MVC</a>
-* <a href="#templating">Dynamic templating</a>
-* <a href="#async">Asynchronous routing</a>
-* <a href="#debug">Debugging http requests</a>
+* [Express and Node dependencies](#installing-dependencies)
+* [Configure applications with package.json]()
+* [Synchronous routing]()
+* [JavaScript MVC]()
+* [Dynamic templating]()
+* [Asynchronous routing]()
+* [Debugging http requests]()
 
 #### What is Express?
 >Fast, unopinionated, minimalist web framework for Node.js  
 >-expressjs.com
-#### <a name="dependencies">Installing Dependencies</a>
+
+#### Installing Dependencies
 ##### Node.js
 The first and most integral dependency is Node, it grants the flexibility to:
 
