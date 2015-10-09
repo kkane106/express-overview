@@ -151,6 +151,38 @@ ls node_modules/express/node_modules/
 # merge-descriptors
 ```
 
+#### Our First Express Route
+
+Now that we have express installed and our package.json file configured, let's stick with convention and deploy `Hello World!` to a real live web browser! Let's start super simple.
+
+The first step is to create a javascript file to hold our routes and server configuration: `touch app.js`
+
+Let's walk step by step through the code as we add it. Declare a variable 'express' to include the express module we installed with npm. This will give us access to all of expresses sub-modules. Then declare an 'app' variable and set it equal to the 'express()' top level function. This is convention and will give us access to the main application.
+
+```javascript
+var express = require('express');
+var app = express();
+```
+
+Next let's configure our server (localhost) so that we can run our app and make sure everything is going as planned. The simplest form ths could take is:
+
+```javascript
+app.listen(3000, function() {
+  console.log("expressGrandma is listening on port 3000!");
+})
+```
+
+Now we can use node to have our server start listening:
+
+```
+node app.js
+```
+
+Opening a browser and navigating to 'localhost:3000' we see...
+
+![Image of Cannot GET /](/imgs/cannot_get.png)
+
+
 #### Resources  
   * [Node Docs](https://nodejs.org/en/docs/)
   * [Express Docs](http://expressjs.com/4x/api.html)
