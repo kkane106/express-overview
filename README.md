@@ -14,6 +14,10 @@
 >Fast, unopinionated, minimalist web framework for Node.js  
 >-expressjs.com
 
+The goal of this project is to provide a step by step, introduction to Node, Express and eventually MongoDB and Angular. My intention is to initially present each of these technologies with as few dependencies (libraries, frameworks, modules, etc) as possible in order to increase your understanding of their innerworkings, that said, once we've done things the hard way we'll circle back and play some with some cool tech.
+
+This approach is meant to clarify some of the magic that goes on behind the scenes. I find value in building a web app from the ground up without a scaffold, hopefully you do too. The first project will be a bit trivial, but will become more involved and hopefully interesting as it grows.
+
 #### Installing Dependencies
 >“There are two questions a man must ask himself: The first is 'Where am I going?' and the second is 'Who will go with me?' 
 
@@ -146,10 +150,6 @@ ls node_modules/express/node_modules/
 # fresh     vary
 # merge-descriptors
 ```
-
-
-
-
 
 #### Resources  
   * [Node Docs](https://nodejs.org/en/docs/)
