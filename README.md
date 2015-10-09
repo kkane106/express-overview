@@ -169,8 +169,21 @@ Next let's configure our server (localhost) so that we can run our app and make 
 ```javascript
 app.listen(3000, function() {
   console.log("expressGrandma is listening on port 3000!");
-})
+});
 ```
+
+The official express have us make this a little bit more maleable, and have us store our server configuration as a variable, ultimately using a formatted string to print out the port specifications we've assigned.
+
+```javascript
+var server = app.listen(3000, function() {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('expressGrandma listening at http://%s:%s', host, port);
+});
+```
+
+This is better code, more abstract/reusable, and unnecessary for our current purposes. I just wanted to make you aware that this is how this looks in the "getting started" documentation.
 
 Now we can use node to have our server start listening:
 
@@ -181,6 +194,36 @@ node app.js
 Opening a browser and navigating to 'localhost:3000' we see...
 
 ![Image of Cannot GET /](/imgs/cannot_get.png)
+
+...that was pretty anti-climactic. We still haven't added any routes, so the browser isn't served any content by our server when we navigate to port 3000. Let's set up a route to serve the browser "Hello World!".
+
+In 'app.js' let's build a 'GET' route to serve data to the client. Routes in Express follow the `app.METHOD(PATH,HANDLER)` convention. 'app' is an instance of express, METHOD is the http request method, PATH is a path on our server, and the HANDLER is a function that will execute when the route is called. The 'GET' method is used to request/serve data, since we want to serve "Hello World!" that's the one we'll be using. Following the `app.METHOD(PATH, HANDLER)` convention our route will look something like this:
+
+```javascript
+app.get('/', function(request, response) {
+
+});
+```
+
+Here we are using the 'GET' http method, the path is '/' which is the root of our application, and we are passing our anonumous handler function to parameters, request (being the information sent to the server) and response (the data we will send back to the client). NOTE: these are typically written with the shorthand (req, res).
+
+Now we have a route, but we aren't responding with any data. Let's see if anything has changed when we navigate to 'localhost:3000':
+
+![Image of no response](/imgs/get_no_send.png)
+
+Hmmm, not quite what we were looking for. Our browser seems hung up waiting for a response, which makes sense, because we aren't sending one. Let's change that. 
+
+The '.send()' can be called on the response parameter and passed a String, Buffer Object, Object, or Array. All we want to do is have "Hello World!" display on the client, so lets try just sending that as a String. Modify the GET route like so:
+
+```javascript
+app.get('/', function(req, res) {
+  res.send("Hello World!");
+});
+```
+
+Refresh the browser and...
+
+![Image of Hello World](/imgs/hello_world.png)
 
 
 #### Resources  
