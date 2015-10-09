@@ -160,6 +160,7 @@ The first step is to create a javascript file to hold our routes and server conf
 Let's walk step by step through the code as we add it. Declare a variable 'express' to include the express module we installed with npm. This will give us access to all of expresses sub-modules. Then declare an 'app' variable and set it equal to the 'express()' top level function. This is convention and will give us access to the main application.
 
 ```javascript
+// app.js
 var express = require('express');
 var app = express();
 ```
@@ -167,6 +168,7 @@ var app = express();
 Next let's configure our server (localhost) so that we can run our app and make sure everything is going as planned. The simplest form ths could take is:
 
 ```javascript
+// app.js
 app.listen(3000, function() {
   console.log("expressGrandma is listening on port 3000!");
 });
@@ -175,6 +177,7 @@ app.listen(3000, function() {
 The official express have us make this a little bit more maleable, and have us store our server configuration as a variable, ultimately using a formatted string to print out the port specifications we've assigned.
 
 ```javascript
+// app.js
 var server = app.listen(3000, function() {
   var host = server.address().address;
   var port = server.address().port;
@@ -200,6 +203,7 @@ Opening a browser and navigating to 'localhost:3000' we see...
 In 'app.js' let's build a 'GET' route to serve data to the client. Routes in Express follow the `app.METHOD(PATH,HANDLER)` convention. 'app' is an instance of express, METHOD is the http request method, PATH is a path on our server, and the HANDLER is a function that will execute when the route is called. The 'GET' method is used to request/serve data, since we want to serve "Hello World!" that's the one we'll be using. Following the `app.METHOD(PATH, HANDLER)` convention our route will look something like this:
 
 ```javascript
+// app.js
 app.get('/', function(request, response) {
 
 });
@@ -216,6 +220,7 @@ Hmmm, not quite what we were looking for. Our browser seems hung up waiting for 
 The '.send()' can be called on the response parameter and passed a String, Buffer Object, Object, or Array. All we want to do is have "Hello World!" display on the client, so lets try just sending that as a String. Modify the GET route like so:
 
 ```javascript
+// app.js
 app.get('/', function(req, res) {
   res.send("Hello World!");
 });
