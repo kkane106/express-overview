@@ -40,7 +40,7 @@ node -v
 # v0.12.7
 ```
 
-Now that Node is installed we have access to Node Package Manager ('npm'). npm helps us manage the dependencies for our application, including module installation through command line.
+Now that Node is installed we have access to 'npm.' It would make sense to assume that npm stands for Node Package Manager, but the reality is that it is not an acronym. npm helps us manage the dependencies for our application, including module installation through command line.
 ##### Configuring your first ExpressJS Application
 Create a new directory for the application, and navigate inside of it.
 
