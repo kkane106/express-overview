@@ -151,6 +151,8 @@ ls node_modules/express/node_modules/
 # merge-descriptors
 ```
 
+It's important to use the `--save` option when we install packages. This way, if another developer clones our repository, the record of package dependencies will be stored in the package.json.
+
 #### Our First Express Route
 
 Now that we have express installed and our package.json file configured, let's stick with convention and deploy `Hello World!` to a real live web browser! Let's start super simple.
