@@ -18,6 +18,31 @@ The goal of this project is to provide a step by step, introduction to Node, Exp
 
 This approach is meant to clarify some of the magic that goes on behind the scenes. I find value in building a web app from the ground up without a scaffold, hopefully you do too. The first project will be a bit trivial, but will become more involved and hopefully interesting as it grows.
 
+#### Response and Request Objects: Or How I Learned To Stop Being Afraid and Love the Internet
+!!!! **Add example of NodeJs app/route configuration without additional dependencies**
+!!!! req/res originate in node and are extended by express
+!!!! break down URL!
+! - protocol (http/https/ftp/file
+! - hostname (google
+! - port (80 by default, can be specified
+! - path (the resources being accessed
+! - querystring (starts with ? name value pairs are seperated by &
+! - fragment (for browser use only, ajax heavy SPAs use them to control the app .. originally used to tell the browser to access a specific part of the document
+
+!!!! **Request methods (get post etc)** 
+
+!!! Headers -- > hidden information
+--> Request (information sent by the browser)
+--> Response (information you send back)
+-example - content type --> browser uses this to render content
+-media type (ie. UTF-8)
+
+!!!! Request Body -> the information sent by the browser to the applicaiton (usually in post requests etc)
+
+!!! Parameters --> information sent, typically from a form
+
+!!! Request Object
+
 #### Installing Dependencies
 >“There are two questions a man must ask himself: The first is 'Where am I going?' and the second is 'Who will go with me?' 
 
