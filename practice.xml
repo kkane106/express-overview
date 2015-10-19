@@ -1,5 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <BusinessCard>
 	<name>John Smith</name>
 	<phone type="mobile">(555) 555-5555</phone>
 	<email>example@gmail.com</email>
 </BusinessCard>
+
+<!-- 
+XML notes: 
+1. Rules
+- this must be included at the beginning
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+- elements can never have 'xml' in them, that is reserved
+- elements cannot begin with numbers or special characters
+
+2. Character Data Sections (CDATA)
+- part of document, not parsed by XML parser
+<![CDATA[]]>
+- contains unescaped textual data
+- could through script inside of it... ie.
+<script>
+<![CDATA[
+  var x = 5 > 1;
+]]>
+</script>
+
+3. Processing Instructions
+<?targetName instruction  ?>
+
+- information to tell the parser how to parse the document
+
+4. Entities
+- use '&' much like html to include special characters
+
+SYNTAX
+- xml MUST have single root tag
+- MUST be closed with a '/>'
+- xml is a stickler for nesting
+
+Namespaces
+- must be unique
+- prevent tags from different languages from conflicting when used within one xml document (namespaces avoid collision)
+ex:
+-->
+<html xmlns="http://"
+			xmlns:furn="http://2">
+	<table>
+		<tr>
+			<td>
+				<furn:table>
+					<furn:type>Coffee</furn:type>
+					<furn:price>199.99</furn:price>
+					<furn:material>Wood</furn:material>
+					<furn:stock>23</furn:stock>
+				</furn:table>
+			</td>
+		</tr>
+	</table>
+</html>
+<!--
+	The above example shows how namespaces can be used to avoid collisions, declaring 'xmlns:furn' here allows us to prefix elements with 'furn' thus differentiating them from html elements
+-->
