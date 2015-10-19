@@ -1,0 +1,5 @@
+<BusinessCard>
+	<name>John Smith</name>
+	<phone type="mobile">(555) 555-5555</phone>
+	<email>example@gmail.com</email>
+</BusinessCard>
