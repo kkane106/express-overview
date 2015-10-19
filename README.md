@@ -42,6 +42,20 @@ This approach is meant to clarify some of the magic that goes on behind the scen
 !!! Parameters --> information sent, typically from a form
 
 !!! Request Object
+The request object (typically represented as a callback and named *req* or *request*)
+Is represented initially as a Node Object http.IncomingMessage
+Express adds functionality with useful properties and methods, these include:
+* `req.params` an array of named parameters
+* `req.query` returns an object of GET parameters (querystring params) as key/value pairs
+* `req.body` an object containing POST params (passed in the body of the request) requires additional dependencies to parse, i.e. the body-parser module
+* `req.headers` the request headers received from the client
+* `req.ip` the client's IP address, could be useful for geocoding, or visit loggin
+* `req.path` the path without all of the other noise (i.e. no query string, protocol, host, port)
+* `req.xhr` returns true if the request is an AJAX call
+* ... and many more
+
+!!! Response Object
+The compliment to the Request object is the Response object, typically named *res*, *resp* or *response*. 
 
 #### Installing Dependencies
 >“There are two questions a man must ask himself: The first is 'Where am I going?' and the second is 'Who will go with me?' 
